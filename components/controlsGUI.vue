@@ -38,8 +38,8 @@ const inputValueChange = () => {
                 <label for="color">Color</label>
                 <input v-model="controlsProps.controls.color" type="color" name="color" id="">
             </div>
+            <GUIInterfaceCircle />
         </div>
-        <GUIInterfaceCircle />
 
         <div class="flex flex-col mt-10  justify-self-end">
             <p>Settings</p>

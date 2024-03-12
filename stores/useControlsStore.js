@@ -1,4 +1,27 @@
 export const useControlsStore = defineStore("controls", () => {
+  const circleValue = ref({
+    cx: {
+      label: "cx",
+      value: 100,
+      type: "number",
+    },
+    cy: {
+      label: "cy",
+      value: 50,
+      type: "number",
+    },
+    radius: {
+      label: "radius",
+      value: 45,
+      type: "number",
+    },
+    color: {
+      label: "color",
+      value: "#fafafa",
+      type: "color",
+    },
+  });
+
   const circleControl = ref([
     {
       label: "cx",
@@ -22,10 +45,17 @@ export const useControlsStore = defineStore("controls", () => {
     },
   ]);
 
+  const updateCircleValue = (value) => {
+    circleValue.value = value;
+    console.log("circleValue", circleValue.value);
+  };
+
   const updateControls = (value) => {};
 
   return {
+    circleValue,
     circleControl,
+    updateCircleValue,
     updateControls,
   };
 });
