@@ -1,13 +1,20 @@
 <script setup>
 
-const props = defineProps({
-    controls: Object
-})
+const rectangleIsActive = ref(false)
+
+const setIsActive = () => {
+    rectangleIsActive.value = true
+    setTimeout(() => {
+        rectangleIsActive.value = false
+    }, 10000)
+}
 
 const selection = useSelectionsStore()
 
 function clickedMe(e) {
+    console.log(e)
     selection.guiControlUpdate(e)
+    console.log(selection.guiControl)
 }
 
 </script>

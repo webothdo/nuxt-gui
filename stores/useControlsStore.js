@@ -20,6 +20,10 @@ export const useControlsStore = defineStore("controls", () => {
       value: "#fafafa",
       type: "color",
     },
+    circleState: {
+      isActive: false,
+      activeClass: "outline outline-fuchsia-500",
+    },
   });
 
   const rectValue = ref({
@@ -47,6 +51,10 @@ export const useControlsStore = defineStore("controls", () => {
       label: "color",
       value: "#04AA6D",
       type: "color",
+    },
+    rectState: {
+      isActive: false,
+      activeClass: "outline outline-fuchsia-500",
     },
   });
 

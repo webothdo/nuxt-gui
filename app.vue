@@ -49,7 +49,7 @@ function updateControls() {
   <div>
     <h1>The home page</h1>
     <main class="flex justify-between pl-[70px]">
-      <SVGBackground :controls="controls" />
+      <SVGBackground />
       <controlsGUI :controls="controls" :settings="settings" @updateControls="updateControls" />
     </main>
   </div>
