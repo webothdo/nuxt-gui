@@ -18,7 +18,13 @@ const inputValueChange = () => {
 <template>
     <div class="border border-gray-700 rounded-md w-[200px] flex flex-col justify-between pt-2 px-3 bg-gray-900">
         <div>
-            <GUIInterfaceCircle />
+            <div>
+                <GUIInterfaceCircle />
+            </div>
+            <div>
+                <p>Rectangle control</p>
+                <GUIInterfaceRectangle />
+            </div>
         </div>
         <div class="flex flex-col mt-10  justify-self-end">
             <p>Settings</p>
