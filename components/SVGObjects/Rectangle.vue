@@ -14,6 +14,6 @@ const rectValue = useControlsStore().rectValue
 </script>
 
 <template>
-    <rect :x="rectValue.x.value" :y="rectValue.y.value" :width="rectValue.width.value" :height="rectValue.height.value"
-        :fill="rectValue.color.value" />
+    <rect @click="$emit('clickRectangle', 'rectangle')" :x="rectValue.x.value" :y="rectValue.y.value"
+        :width="rectValue.width.value" :height="rectValue.height.value" :fill="rectValue.color.value" />
 </template>

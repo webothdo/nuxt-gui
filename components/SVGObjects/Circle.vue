@@ -14,6 +14,6 @@ const circleValue = useControlsStore().circleValue
 </script>
 
 <template>
-    <circle :r="circleValue.radius.value" :cx="circleValue.cx.value" :cy="circleValue.cy.value"
-        :fill="circleValue.color.value" />
+    <circle @click="$emit('clickCircle', 'circle')" :r="circleValue.radius.value" :cx="circleValue.cx.value"
+        :cy="circleValue.cy.value" :fill="circleValue.color.value" />
 </template>

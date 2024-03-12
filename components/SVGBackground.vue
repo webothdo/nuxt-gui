@@ -4,8 +4,10 @@ const props = defineProps({
     controls: Object
 })
 
+const selection = useSelectionsStore()
+
 function clickedMe(e) {
-    console.log(e.clientX, e.clientY, e.view)
+    selection.guiControlUpdate(e)
 }
 
 </script>
@@ -13,7 +15,7 @@ function clickedMe(e) {
 <template>
     <svg width="800" height="500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
         class="border border-gray-700 rounded-xl bg-black">
-        <SVGObjectsRectangle />
-        <SVGObjectsCircle />
+        <SVGObjectsRectangle @clickRectangle="clickedMe" />
+        <SVGObjectsCircle @clickCircle="clickedMe" />
     </svg>
 </template>
