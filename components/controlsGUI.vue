@@ -9,19 +9,22 @@ const controlsProps = defineProps({
 const emit = defineEmits(['updateControls', 'updateSteps'])
 
 const settings = useSettingsStore()
+const selection = useSelectionsStore()
 
-const inputValueChange = () => {
-    emit('updateControls',)
-}
+
+
+
+
 </script>
 
 <template>
     <div class="border border-gray-700 rounded-md w-[200px] flex flex-col justify-between pt-2 px-3 bg-gray-900">
         <div>
-            <div>
+            <div v-if="selection.guiControl === 'circle'">
+                <p>Circle control</p>
                 <GUIInterfaceCircle />
             </div>
-            <div>
+            <div v-else-if="selection.guiControl === 'rectangle'">
                 <p>Rectangle control</p>
                 <GUIInterfaceRectangle />
             </div>
