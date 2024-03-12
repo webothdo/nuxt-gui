@@ -22,8 +22,37 @@ export const useControlsStore = defineStore("controls", () => {
     },
   });
 
+  const rectValue = ref({
+    x: {
+      label: "x",
+      value: 10,
+      type: "number",
+    },
+    y: {
+      label: "y",
+      value: 10,
+      type: "number",
+    },
+    width: {
+      label: "width",
+      value: 200,
+      type: "number",
+    },
+    height: {
+      label: "height",
+      value: 100,
+      type: "number",
+    },
+    color: {
+      label: "color",
+      value: "#04AA6D",
+      type: "color",
+    },
+  });
+
   return {
     circleValue,
+    rectValue,
   };
 });
 
