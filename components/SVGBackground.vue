@@ -1,6 +1,6 @@
-<script setup>
+<script setup lang="jsx">
 
-// const rectangleIsActive = ref(false)
+//const rectangleIsActive = ref(false)
 
 // const setIsActive = () => {
 //     rectangleIsActive.value = true
@@ -51,8 +51,8 @@ const selection = useSelectionsStore()
 
 function clickedMe(e) {
     console.log(e)
-    selection.guiControlUpdate(e)
-    console.log(selection.guiControl)
+    // selection.guiControlUpdate(e)
+    // console.log(selection.guiControl)
 }
 
 </script>
@@ -61,7 +61,7 @@ function clickedMe(e) {
     <svg width="800" height="500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
         class="border border-gray-700 rounded-xl bg-black">
         <template v-for="e in el">
-            <SVGObject :model="e" />
+            <SVGObject @clickRect="clickedMe" @clickCircle="clickedMe" :model="e" />
         </template>
         <!-- <SVGObjectsRectangle @clickRectangle="clickedMe" />
         <SVGObjectsCircle @clickCircle="clickedMe" /> -->
