@@ -49,9 +49,9 @@ const createObject = () => {
 
 const selection = useSelectionsStore()
 
-function clickedMe(e) {
-    console.log(e)
-    // selection.guiControlUpdate(e)
+function clickedMe(element) {
+    console.log(element)
+    selection.guiControlUpdate(element[0], element[1])
     // console.log(selection.guiControl)
 }
 

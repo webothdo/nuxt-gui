@@ -1,13 +1,19 @@
 export const useSelectionsStore = defineStore("selections", () => {
-  const guiControl = ref("circle");
+  const guiControl = ref({
+    type: "",
+    id: "",
+  });
 
-  const guiControlUpdate = (element) => {
-    if (guiControl.value === element) {
-      console.log("Already selected", element);
+  const guiControlUpdate = (type, id) => {
+    if (guiControl.value.id === id) {
+      console.log("Already selected", type, id);
       return guiControl.value;
-    } else if (guiControl.value !== element) {
-      console.log("Selected", element);
-      return (guiControl.value = element);
+    } else if (guiControl.value.id !== id) {
+      guiControl.value = {
+        type,
+        id,
+      };
+      console.log("Selected", type, id);
     }
   };
 
