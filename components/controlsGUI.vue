@@ -20,13 +20,16 @@ const selection = useSelectionsStore()
 <template>
     <div class="border border-gray-700 rounded-md w-[200px] flex flex-col justify-between pt-2 px-3 bg-gray-900">
         <div>
-            <div v-if="selection.guiControl === 'circle'">
+            <div v-if="selection.guiControl.type === 'circle'">
                 <p>Circle control</p>
                 <GUIInterfaceCircle />
             </div>
-            <div v-else-if="selection.guiControl === 'rectangle'">
+            <div v-else-if="selection.guiControl.type === 'rect'">
                 <p>Rectangle control</p>
                 <GUIInterfaceRectangle />
+            </div>
+            <div v-else>
+                <p>Select an svg element</p>
             </div>
         </div>
         <div class="flex flex-col mt-10  justify-self-end">
