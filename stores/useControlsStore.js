@@ -81,6 +81,32 @@ export const useControlsStore = defineStore("controls", () => {
     },
   ]);
 
+  const updateObjectValue = (value, payload) => {
+    // const findItem = objectValue.value.findIndex((item) => item.id === value);
+    // console.log(findItem);
+    // if (findItem) {
+    //   objectValue.value[findItem].control = payload;
+    //   console.log(objectValue.value);
+    // findItem.control = payload;
+    // console.log("findItem", objectValue.value);
+    // payload.map((el) => {
+    //   const findControl = objectValue.value.findIndex((arr) => arr.control);
+    //   console.log("findControll", findControl);
+    // });
+    // }
+    // if (findItem) {
+    //   findItem.control = value.control.map((control) => {
+    //     const findControl = findItem.control.find(
+    //       (item) => item.label === control.label
+    //     );
+    //     if (findControl) {
+    //       return { ...findControl, value: control.value };
+    //     }
+    //     return control;
+    //   });
+    // }
+  };
+
   const rectValue = ref({
     x: {
       label: "x",
@@ -116,6 +142,7 @@ export const useControlsStore = defineStore("controls", () => {
   return {
     circleValue,
     objectValue,
+    updateObjectValue,
     rectValue,
   };
 });

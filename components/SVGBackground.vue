@@ -54,6 +54,7 @@ const objectValue = useControlsStore()
 function clickedMe(element) {
     console.log(element)
     selection.guiControlUpdate(element[0], element[1])
+    console.log(objectValue.objectValue)
     // console.log(selection.guiControl)
 }
 
