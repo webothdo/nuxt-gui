@@ -32,17 +32,22 @@ export const useControlsStore = defineStore("controls", () => {
       type: "rect",
       control: [
         {
-          label: "cx",
+          label: "x",
           value: 102,
           type: "number",
         },
         {
-          label: "cy",
+          label: "y",
           value: 50,
           type: "number",
         },
         {
-          label: "radius",
+          label: "width",
+          value: 45,
+          type: "number",
+        },
+        {
+          label: "height",
           value: 45,
           type: "number",
         },

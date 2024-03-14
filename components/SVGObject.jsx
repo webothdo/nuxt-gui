@@ -33,11 +33,11 @@ export default defineComponent(
               onClick={() => {
                 return clickMe(props.model.type, props.model.id);
               }}
-              width="20"
-              height="10"
-              x={rectValues.value.cx}
-              y="50"
-              fill={rectValues.value.color}
+              x={props.model.control[0].value}
+              y={props.model.control[1].value}
+              width={props.model.control[2].value}
+              height={props.model.control[3].value}
+              fill={props.model.control[4].value}
             />
           )}
           {props.model.type === "circle" && (
