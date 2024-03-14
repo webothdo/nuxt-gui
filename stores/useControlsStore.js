@@ -26,6 +26,61 @@ export const useControlsStore = defineStore("controls", () => {
     },
   });
 
+  const objectValue = ref([
+    {
+      id: 22,
+      type: "rect",
+      control: [
+        {
+          label: "cx",
+          value: 102,
+          type: "number",
+        },
+        {
+          label: "cy",
+          value: 50,
+          type: "number",
+        },
+        {
+          label: "radius",
+          value: 45,
+          type: "number",
+        },
+        {
+          label: "color",
+          value: "#fafafa",
+          type: "color",
+        },
+      ],
+    },
+    {
+      id: 245,
+      type: "circle",
+      control: [
+        {
+          label: "cx",
+          value: 103,
+          type: "number",
+        },
+        {
+          label: "cy",
+          value: 50,
+          type: "number",
+        },
+        {
+          label: "radius",
+          value: 45,
+          type: "number",
+        },
+        {
+          label: "color",
+          value: "#15D515",
+          type: "color",
+        },
+      ],
+    },
+  ]);
+
   const rectValue = ref({
     x: {
       label: "x",
@@ -60,6 +115,7 @@ export const useControlsStore = defineStore("controls", () => {
 
   return {
     circleValue,
+    objectValue,
     rectValue,
   };
 });

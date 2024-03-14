@@ -49,6 +49,8 @@ const createObject = () => {
 
 const selection = useSelectionsStore()
 
+const objectValue = useControlsStore()
+
 function clickedMe(element) {
     console.log(element)
     selection.guiControlUpdate(element[0], element[1])
@@ -60,7 +62,7 @@ function clickedMe(element) {
 <template>
     <svg width="800" height="500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
         class="border border-gray-700 rounded-xl bg-black">
-        <template v-for="e in el">
+        <template v-for="e in objectValue.objectValue">
             <SVGObject @clickRect="clickedMe" @clickCircle="clickedMe" :model="e" />
         </template>
         <!-- <SVGObjectsRectangle @clickRectangle="clickedMe" />

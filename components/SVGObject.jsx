@@ -11,6 +11,19 @@ export default defineComponent(
       }
     };
 
+    const rectValues = ref({});
+    const circleValues = ref({});
+
+    if (props.model.type === "rect") {
+      props.model.control.forEach((element) => {
+        rectValues.value[element.label] = element.value;
+      });
+    } else if (props.model.type === "circle") {
+      props.model.control.forEach((element) => {
+        circleValues.value[element.label] = element.value;
+      });
+    }
+
     return () => {
       return (
         <>
@@ -21,9 +34,9 @@ export default defineComponent(
               }}
               width="20"
               height="10"
-              x={props.model.cx}
+              x={rectValues.value.cx}
               y="50"
-              fill={props.model.color}
+              fill={rectValues.value.color}
             />
           )}
           {props.model.type === "circle" && (
@@ -32,9 +45,9 @@ export default defineComponent(
                 return clickMe(props.model.type, props.model.id);
               }}
               r="20"
-              cx={props.model.cx}
+              cx={circleValues.value.cx}
               cy="50"
-              fill={props.model.color}
+              fill={circleValues.value.color}
             />
           )}
         </>
