@@ -66,5 +66,6 @@ const el = [
             <SVGBackground />
             <controlsGUI :controls="controls" :settings="settings" @updateControls="updateControls" />
         </main>
+        <ObjectCreation />
     </div>
 </template>

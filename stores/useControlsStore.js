@@ -1,3 +1,4 @@
+import randomId from "~/utils/randomId";
 export const useControlsStore = defineStore("controls", () => {
   const circleValue = ref({
     cx: {
@@ -86,6 +87,71 @@ export const useControlsStore = defineStore("controls", () => {
     },
   ]);
 
+  const createCircle = () => {
+    let rando = randomId();
+    objectValue.value.push({
+      id: rando,
+      type: "circle",
+      control: [
+        {
+          label: "cx",
+          value: 103,
+          type: "number",
+        },
+        {
+          label: "cy",
+          value: 50,
+          type: "number",
+        },
+        {
+          label: "radius",
+          value: 45,
+          type: "number",
+        },
+        {
+          label: "color",
+          value: "#15D515",
+          type: "color",
+        },
+      ],
+    });
+  };
+
+  const createRect = () => {
+    let rando = randomId();
+    objectValue.value.push({
+      id: 22,
+      type: "rect",
+      control: [
+        {
+          label: "x",
+          value: 102,
+          type: "number",
+        },
+        {
+          label: "y",
+          value: 50,
+          type: "number",
+        },
+        {
+          label: "width",
+          value: 45,
+          type: "number",
+        },
+        {
+          label: "height",
+          value: 45,
+          type: "number",
+        },
+        {
+          label: "color",
+          value: "#fafafa",
+          type: "color",
+        },
+      ],
+    });
+  };
+
   const updateObjectValue = (value, payload) => {
     // const findItem = objectValue.value.findIndex((item) => item.id === value);
     // console.log(findItem);
@@ -147,7 +213,8 @@ export const useControlsStore = defineStore("controls", () => {
   return {
     circleValue,
     objectValue,
-    updateObjectValue,
+    createCircle,
+    createRect,
     rectValue,
   };
 });
