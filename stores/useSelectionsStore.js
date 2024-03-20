@@ -3,6 +3,7 @@ export const useSelectionsStore = defineStore("selections", () => {
     type: "",
     id: "",
   });
+  const objectSelected = ref({});
 
   const guiControlUpdate = (type, id) => {
     if (guiControl.value.id === id) {
@@ -17,9 +18,20 @@ export const useSelectionsStore = defineStore("selections", () => {
     }
   };
 
+  const getObjectSelected = (id, object) => {
+    object.filter((el) => {
+      if (el.id === id) {
+        objectSelected.value = el;
+        console.log(objectSelected.value);
+      }
+    });
+  };
+
   return {
     guiControl,
     guiControlUpdate,
+    objectSelected,
+    getObjectSelected,
   };
 });
 

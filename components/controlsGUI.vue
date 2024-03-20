@@ -18,7 +18,8 @@ const selection = useSelectionsStore()
 </script>
 
 <template>
-    <div class="border border-gray-700 rounded-md w-[200px] flex flex-col justify-between pt-2 px-3 bg-gray-900">
+    <div
+        class="border border-gray-700 rounded-md w-[200px] h-[508px] flex flex-col justify-between pt-2 px-3 bg-gray-900 overflow-clip relative">
         <div>
             <div v-if="selection.guiControl.type === 'circle'">
                 <p>Circle control</p>
