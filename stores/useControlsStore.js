@@ -120,7 +120,7 @@ export const useControlsStore = defineStore("controls", () => {
   const createRect = () => {
     let rando = randomId();
     objectValue.value.push({
-      id: 22,
+      id: rando,
       type: "rect",
       control: [
         {
