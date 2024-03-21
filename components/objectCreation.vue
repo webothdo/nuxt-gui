@@ -6,7 +6,7 @@ const control = useControlsStore()
 </script>
 
 <template>
-    <div>
+    <div class="w-full justify-center flex gap-5 p-2">
         <button @click="control.createCircle" class="border rounded bg-gray-900 h-28 w-28">
             <CircleIcon class="w-20 h-20 mx-auto " />
         </button>
