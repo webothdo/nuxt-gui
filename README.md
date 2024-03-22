@@ -1,75 +1,31 @@
-# Nuxt 3 Minimal Starter
+# NuxtGUI - A mini canva project
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![nuxtgui preview](/public/ng-screenshot.png)
 
-## Setup
+Made with [Nuxtjs](https://nuxt.com), tailwindcss for styling and pinia for state management
 
-Make sure to install the dependencies:
+## Features
 
-```bash
-# npm
-npm install
+- [x] Dynamically add elements
+- [x] Each element has their own control
+- [x] User can edit the background of the canvas
+- [] Some more controls for the elements
+- [] Would be nice to have drag and drop magic :)
 
-# pnpm
-pnpm install
+### Inspiration
 
-# yarn
-yarn install
+I got the inspiration from [Joy of code](https://joyofcode.xyz) in one of his videos on youtube and I sorta went overboard wth my implementation though.
 
-# bun
-bun install
-```
+### Objective
 
-## Development Server
+Honestly, I just wanted to do this to prove to myself I can potentially work on something a little bit important?? And I also wanted some of that github starrrss
 
-Start the development server on `http://localhost:3000`:
+### What I learnt
 
-```bash
-# npm
-npm run dev
+I learned the hard way
 
-# pnpm
-pnpm run dev
+- If you're gonna have state management in your app, do it at the beginning
+- Vuejs and Nuxtjs documentation doesn't provide any 'real' documentation for how to use jsx - here where my googling and tinkering skills came in handy
+- To plan your project ahead and not have to build and rebuild because the implementation you have doesn't meet your goals or because you just wanted to try and see if you could build it
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+You can let me know if you would like to contribute to the project, or you can just fork it and work on it on your own
