@@ -4,6 +4,8 @@ const selection = useSelectionsStore()
 
 const objectValue = useControlsStore()
 
+const settings = useSettingsStore()
+
 const setIsActive = () => {
     selection.objectSelected.state.isActive = true
     setTimeout(() => {
@@ -24,7 +26,7 @@ function clickedMe(element) {
 
 <template>
     <svg width="800" height="500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
-        class="border border-gray-700 rounded-xl bg-black relative">
+        class="border border-gray-700 rounded-xl relative" :style="{ 'background-color': settings.svgBackground }">
         <template v-for="e in objectValue.objectValue">
             <SVGObject @clickRect="clickedMe" @clickCircle="clickedMe" :model="e" />
         </template>

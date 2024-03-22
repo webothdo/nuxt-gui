@@ -33,12 +33,19 @@ const selection = useSelectionsStore()
                 <p>Select an svg element</p>
             </div>
         </div>
-        <div class="flex flex-col mt-10  justify-self-end">
+        <div class="flex flex-col mt-10 justify-self-end">
             <p>Settings</p>
-            <div class="flex flex-col">
-                <label for="cx">Steps</label>
-                <input v-model="settings.steps" @change="" type="number" name="cx" @click="updateControls"
-                    class="border-none rounded-md bg-stone-500 w-1/5">
+            <div class="space-y-2">
+                <div class="flex justify-between">
+                    <label for="cx">Steps</label>
+                    <input v-model="settings.steps" @change="" type="number" name="cx" @click="updateControls"
+                        class="border-none rounded-md bg-stone-500 w-14 h-8 pl-4">
+                </div>
+                <div class="flex justify-between">
+                    <label for="background">background</label>
+                    <input v-model="settings.svgBackground" type="color" id="background" name="background"
+                        class="border-none rounded bg-stone-500 w-14 h-8 pl-2 pr-2">
+                </div>
             </div>
         </div>
     </div>
