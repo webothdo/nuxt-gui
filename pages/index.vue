@@ -60,8 +60,13 @@ const el = [
 
 <template>
     <div>
-        <NuxtLink to="/testpage">test page</NuxtLink>
-        <h1>The home page</h1>
+        <nav class="flex justify-between px-5 py-3">
+            <h1 class="text-3xl font-bold ">Nuxt<span class="text-green-400">GUI</span></h1>
+            <NuxtLink class="font-bold hover:text-green-400 font-[Gambetta]" to="https://github.com/webothdo/nuxt-gui"
+                target="_blank">
+                github
+            </NuxtLink>
+        </nav>
         <main class="flex justify-between pl-[70px]">
             <SVGBackground />
             <controlsGUI :controls="controls" :settings="settings" @updateControls="updateControls" />
