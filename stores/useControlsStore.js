@@ -122,6 +122,10 @@ export const useControlsStore = defineStore("controls", () => {
           type: "color",
         },
       ],
+      state: {
+        isActive: false,
+        activeClass: "outline outline-fuchsia-500",
+      },
     });
   };
 
@@ -157,6 +161,10 @@ export const useControlsStore = defineStore("controls", () => {
           type: "color",
         },
       ],
+      state: {
+        isActive: false,
+        activeClass: "outline outline-fuchsia-500",
+      },
     });
   };
 
