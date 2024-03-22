@@ -58,6 +58,10 @@ export const useControlsStore = defineStore("controls", () => {
           type: "color",
         },
       ],
+      state: {
+        isActive: false,
+        activeClass: "outline outline-fuchsia-500",
+      },
     },
     {
       id: 245,
@@ -84,6 +88,10 @@ export const useControlsStore = defineStore("controls", () => {
           type: "color",
         },
       ],
+      state: {
+        isActive: false,
+        activeClass: "outline outline-fuchsia-500",
+      },
     },
   ]);
 

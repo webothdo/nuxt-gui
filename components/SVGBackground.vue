@@ -4,11 +4,20 @@ const selection = useSelectionsStore()
 
 const objectValue = useControlsStore()
 
+const setIsActive = () => {
+    selection.objectSelected.state.isActive = true
+    setTimeout(() => {
+        selection.objectSelected.state.isActive = false
+    }, 500)
+
+}
+
 function clickedMe(element) {
     selection.getObjectSelected(element[1], objectValue.objectValue)
     // console.log(selection.objectSelected)
     // console.log(element)
     selection.guiControlUpdate(element[0], element[1])
+    setIsActive()
 }
 
 </script>

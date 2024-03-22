@@ -5,6 +5,12 @@ const controls = useControlsStore()
 const selection = useSelectionsStore()
 
 
+if (selection.guiControl.id === selection.objectSelected.id) {
+    console.log(selection.objectSelected.state)
+    console.log(selection.objectSelected.state)
+}
+
+
 // console.log(selection.guiControl.id === selection.objectSelected.id)
 </script>
 

@@ -5,6 +5,7 @@ export default defineComponent(
     // const emit = defineEmits(["clickRect", "clickCircle"]);
     const clickMe = (type, payload) => {
       if (type === "rect") {
+        props.model.state.isActive = true;
         ctx.emit("clickRect", ["rect", payload]);
       } else if (type === "circle") {
         ctx.emit("clickCircle", ["circle", payload]);
@@ -38,6 +39,9 @@ export default defineComponent(
               width={props.model.control[2].value}
               height={props.model.control[3].value}
               fill={props.model.control[4].value}
+              class={
+                props.model.state.isActive ? "outline outline-lime-300" : ""
+              }
             />
           )}
           {props.model.type === "circle" && (
@@ -49,6 +53,9 @@ export default defineComponent(
               cy={props.model.control[1].value}
               r={props.model.control[2].value}
               fill={props.model.control[3].value}
+              class={
+                props.model.state.isActive ? "outline outline-lime-300" : ""
+              }
             />
           )}
         </>
