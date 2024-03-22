@@ -5,7 +5,6 @@ export default defineComponent(
     // const emit = defineEmits(["clickRect", "clickCircle"]);
     const clickMe = (type, payload) => {
       if (type === "rect") {
-        props.model.state.isActive = true;
         ctx.emit("clickRect", ["rect", payload]);
       } else if (type === "circle") {
         ctx.emit("clickCircle", ["circle", payload]);

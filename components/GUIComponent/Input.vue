@@ -4,7 +4,7 @@ const props = defineProps({
 })
 
 const selection = useSelectionsStore()
-const control = useControlsStore()
+const settings = useSettingsStore()
 
 const tempValueArray = ref([])
 
@@ -43,6 +43,6 @@ const changed = () => {
         class="flex justify-between w-full">
         <label :for="value.label" class="text-xl">{{ value.label }}</label>
         <input @input="changed" v-model="value.value" :type="value.type" :name="value.label" :id="value.label"
-            class="border-none rounded bg-stone-500 w-14 h-8 pl-4">
+            :step="settings.steps" class="border-none rounded bg-stone-500 w-14 h-8 pl-4">
     </div>
 </template>

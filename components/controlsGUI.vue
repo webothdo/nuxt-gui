@@ -38,8 +38,8 @@ const selection = useSelectionsStore()
             <div class="space-y-2">
                 <div class="flex justify-between">
                     <label for="cx">Steps</label>
-                    <input v-model="settings.steps" @change="" type="number" name="cx" @click="updateControls"
-                        class="border-none rounded-md bg-stone-500 w-14 h-8 pl-4">
+                    <input v-model="settings.steps" @change="settings.setSteps" type="number" name="cx"
+                        @click="updateControls" class="border-none rounded-md bg-stone-500 w-14 h-8 pl-4">
                 </div>
                 <div class="flex justify-between">
                     <label for="background">background</label>
